@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block body %}
+<h1>Welcome back, {{ user.userIdentifier }}!</h1>
+    
+    <div class="stats-panel">
+        <p>Your last login was on: {{ user.lastLogin|date('M d, Y H:i') }}</p>
+        {# Add user-specific widgets here #}
+    </div>
+    
+    <p>Use the menu on the left to navigate your account.</p>
+{% endblock %}

@@ -1,0 +1,24 @@
+{# templates/dashboard/layout.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}User Dashboard{% endblock %}
+
+{% block body %}
+    <div class="user-dashboard-wrapper">
+        <aside class="dashboard-sidebar">
+            <h2>User Menu</h2>
+            <ul>
+                <li><a href="{{ path('app_dashboard') }}">Home</a></li>
+                <li><a href="{{ path('app_profile') }}">My Profile</a></li>
+                <li><a href="{{ path('app_settings') }}">Settings</a></li>
+                <li><a href="{{ path('app_logout') }}">Logout</a></li>
+            </ul>
+        </aside>
+        
+        <main class="dashboard-content">
+            {% block dashboard_content %}
+                {# The specific page content will be placed here #}
+            {% endblock %}
+        </main>
+    </div>
+{% endblock %}
